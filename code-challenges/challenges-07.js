@@ -23,8 +23,13 @@
 
 const objLat = (obj) => {
     // write your code here
-    let text = `my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
+    let firstName = obj.firstName;
+    let lastNmae = obj.lastName;
+    let age = obj.age;
+    let hobby = obj.hobby;
 
+    let info = `My name is ${firstName} ${lastNmae} Iam ${age}, and I love ${hobby}.`;
+    return info 
 };
 // -------------------------------------------------------------------------------------------------------
 

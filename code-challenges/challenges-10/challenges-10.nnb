@@ -15,13 +15,6 @@
             "outputs": []
         },
         {
-            "language": "markdown",
-            "source": [
-                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
-            ],
-            "outputs": []
-        },
-        {
             "language": "javascript",
             "source": [
                 "function birthdayCakeCandles(candles){\n    let count = 0;\n    let maxHight = 0;\n    for (let i = 0; i < candles.length; i++) {\n        let high= candles[i];\n        if (high > maxHight) {\n            maxHight = high;\n             count = 1;\n        }else if(high === maxHight) {\n             count++;\n        }\n        \n    }\n    return count;\n\n}\ncandles=[3,2,1,3] ;\nconsole.log(birthdayCakeCandles(candles));\n"
