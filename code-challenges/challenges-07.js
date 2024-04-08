@@ -22,14 +22,12 @@
 
 
 const objLat = (obj) => {
-    // write your code here
-    let firstName = obj.firstName;
-    let lastNmae = obj.lastName;
-    let age = obj.age;
-    let hobby = obj.hobby;
 
-    let info = `My name is ${firstName} ${lastNmae} Iam ${age}, and I love ${hobby}.`;
+    // to handel with capital latter in firstName   
+    let capitalFirstName = obj.firstName.charAt(0).toUpperCase() + obj.firstName.substring(1);
+    let info = `my name is ${capitalFirstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
     return info 
+
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -93,7 +91,32 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    // write your code here
+    // steps => 1- extract experience>1 2- get first last name 3- gathering in new array 
+    let employeeCvs = [];
+    //looping array using for of 
+    for (let applicant of arr) {
+        
+        if (applicant.yearsOfExperience > 1) {
+
+            let fullName = "";
+
+            if (applicant.firstName && applicant.lastName) {
+                fullName = applicant.firstName + " " + applicant.lastName;
+            } else {
+                fullName = applicant.firstName || applicant.lastName;
+            }
+
+            let employeeApplicant = {
+                fullName: fullName,
+                tech: applicant.tech
+            };
+
+            employeeCvs.push(employeeApplicant);
+        }
+    }
+
+    return employeeCvs;
+
 };
 // -------------------------------------------------------------------------------------------------------
 
