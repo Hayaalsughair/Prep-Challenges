@@ -25,6 +25,7 @@ const arrInc = (arr) => {
     });
     return result;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -43,7 +44,7 @@ const roundDecimals = (arr) => {
     let result = [];
     arr.forEach(myArr);
     //decemal = type of number 
-    function myArr (decemal, i, arr){
+    function myArr (decemal, i, arr){ 
         arr[i] = Math.round(decemal);
 
         return arr
