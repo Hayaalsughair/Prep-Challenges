@@ -60,18 +60,10 @@ function square(arr) {
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
 function fullName(arr) {
-    let fullNames = [];
-  
-    for (let student in arr) {
-      if (arr.hasOwnProperty(student)) { 
-        let firstName = arr[student].firstName;
-        let lastName = arr[student].lastName;
-        fullNames.push(firstName + " " + lastName);
-      }
-    }
-  
-    return fullNames;
-  }
+    let full = arr.map(arr => `${arr.firstName} ${arr.lastName}`);
+    return full;  
+}
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
