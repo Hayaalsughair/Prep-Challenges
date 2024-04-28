@@ -127,20 +127,16 @@ function fullName(arr) {
 //]
 // -------------
 
-function gradesAvg(students) {
-    function calculateAverage(gradesList) {
-        const sum = gradesList.reduce((acc, grade) => acc + grade, 0);
-        return sum / gradesList.length;
-    }
-    
-    function addAvgProperty(student) {
-        const avg = calculateAverage(student.gradsList);
-        return { ...student, avg };
-    }
-    
-    function calculateAverages(students) {
-        return students.map(addAvgProperty);
-    }
+function gradesAvg(arr) {
+    let arr2 = arr.map(x =>{
+        let sum=0;
+        for(let i of x.gradsList){
+            sum+=i;
+        }
+        let avg= sum / x.gradsList.length;
+        return {...x, avg};
+    })
+    return arr2;
 }
 // -------------------------------------------------------------------------------------------------------
 
